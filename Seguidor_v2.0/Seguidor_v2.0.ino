@@ -23,12 +23,12 @@ void setup (void) {
   pinMode (MD2, OUTPUT);
   pinMode (MDsinal, OUTPUT);*/
 
-  Serial.begin (19200);
 }
 
 void loop() {
   ler_sensores();
   sinal = pid_calculate (0, 0.01, 50, error, 1);
+  definir_acao();
   switch (modo) {
     case parado:
       frear();
@@ -39,6 +39,6 @@ void loop() {
       break;
 
     case curva:
-      virar (sinal, sinal * (-1));
+      verificaCurva();
   }
 }

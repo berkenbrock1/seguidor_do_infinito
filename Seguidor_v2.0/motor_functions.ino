@@ -1,13 +1,11 @@
 void motor_direito (int sinal) {
   digitalWrite (MD1, HIGH);
   digitalWrite (MD2, LOW);
-  ledcWrite (MDsinal, sinal);
 }
 
 void motor_esquerdo (int sinal) {
-  digitalWrite (ME1, HIGH);
-  digitalWrite (ME2, LOW);
-  ledcWrite (MEsinal, sinal);
+  digitalWrite(ME1, HIGH);
+  digitalWrite(ME2, LOW);
 }
 
 void frear (void) {
@@ -25,4 +23,3 @@ void virar (int sinal_direito, int sinal_esquerdo) {
   motor_direito (255 - sinal_direito);
   motor_esquerdo (255 - sinal_esquerdo);
 }
-
