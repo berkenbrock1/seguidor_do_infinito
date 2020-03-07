@@ -4,11 +4,13 @@
       if (noSensor == false) {
         noSensor = true;
         iterador++;
+//        digitalWrite(PC13, LOW);
       }
     }
     else if (chegada == 1) {
       if (noSensor == true) {
         noSensor = false;
+//        digitalWrite(PC13, HIGH);
       }
     }
     tempo = millis();
